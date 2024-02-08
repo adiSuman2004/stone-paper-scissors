@@ -5,6 +5,14 @@ const choices = document.querySelectorAll(".choice");
 const msg = document.querySelector("#msg");
 const Score = document.querySelector("#user-score");
 const Comp = document.querySelector("#comp-score");
+let btn = document.querySelector("#reset")
+
+const resetBtn = () => {
+    userScore = 0;
+    compScore = 0;
+    Score.innerText = 0;
+    Comp.innerText = 0;
+}
 
 const showWinner = (userWin, userChoice, compChoice) => {
     if (userWin) {
@@ -62,3 +70,5 @@ choices.forEach((choice) => {
         playGame(userChoice);
     });
 });
+
+btn.addEventListener("click", resetBtn);
