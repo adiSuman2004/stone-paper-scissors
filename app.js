@@ -12,6 +12,8 @@ const resetBtn = () => {
     compScore = 0;
     Score.innerText = 0;
     Comp.innerText = 0;
+    msg.innerText = "Play Your Move";
+    msg.style.backgroundColor = "#081b31";
 }
 
 const showWinner = (userWin, userChoice, compChoice) => {
